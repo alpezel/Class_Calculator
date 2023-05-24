@@ -51,10 +51,9 @@ class Display:
         while True:
             try:
                 n1, n2 = map(float,input("\n\033[0;33mEnter two numbers (put space in between): \033[0;39m").split())
+                return n1, n2
             except ValueError:
                 print("\n\033[0;31m[The input is not a number or not enough values inputted!]")
-            else:
-                break
     
     def try_again():
         # Ask if the user wants to try again or not (yes or no) 
