@@ -62,7 +62,6 @@ class Display:
     @staticmethod
     def try_again():
         # Ask if the user wants to try again or not (yes or no) 
-        # if yes repeat program
         while True:
             tryagain = input("\n\033[0;32mDo you want to try again? (yes or no): \033[0;39m")
             if tryagain.lower() == "yes" or tryagain.lower() == "no":

@@ -77,17 +77,3 @@ while True:
         print ("\033[0;34mThank you!")
         print(boarder,"\n")
         break
-
-    # Ask if the user wants to try again or not (yes or no) 
-        # use exception if the input is not yes or no; display error message and try again
-        # if yes repeat program; if no display "Thank you!" 
-        while True:
-                tryagain= input("\n\033[0;32mDo you want to try again? (yes or no): \033[0;39m")
-                while tryagain.lower() != "yes" and tryagain.lower() != "no":
-                    print ("\n\033[0;31m[The input is not (yes or no)]")
-                    tryagain= input("\n\033[0;32mDo you want to try again? (yes or no): \033[0;39m")
-                if tryagain.lower() == "no":
-                    print(boarder,"\n")
-                    print ("\033[0;34mThank you!")
-                    print(boarder,"\n")
-                    break
