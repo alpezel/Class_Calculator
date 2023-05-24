@@ -13,13 +13,13 @@
 # Example Output 
 
 ### Output in Exception handling for User Input and Addition of Numbers
-![](img/ss1.png)
+![](img/ss1.PNG)
 ### Output in Exception handling on try again and Subtraction of Numbers
-![](img/ss2.png)
+![](img/ss2.PNG)
 ### Output in Multiplication of Numbers and ZeroDivisionError handling  
-![](img/ss3.png)
+![](img/ss3.PNG)
 ### Output in Division of Numbers and Text before the program exits
-![](img/ss4.png)
+![](img/ss4.PNG)
 # How To Use / Run
 1. Install Python on your computer to run the code. You can download its latest version here: https://www.python.org/downloads/ 
 2. Copy the code from the repository. 
