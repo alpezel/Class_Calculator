@@ -28,10 +28,7 @@ while True:
         print ("\n\033[0;36mResult:",quot)
         print(boarder)
 
-    
-    try_again = menu.try_again()
-    if  try_again == "no":
-        print(boarder,"\n")
-        print ("\033[0;34mThank you!")
-        print(boarder,"\n")
-    break
+    # Ask if the user wants to try again or not (yes or no) 
+    # use exception if the input is not yes or no; display error message and try again
+    # if yes repeat program; if no display "Thank you!" 
+   
