@@ -24,6 +24,7 @@ while True:
     print("\n\033[0;36mResult:", result)
     print(boarder)
 
+     # if yes repeat program; if no display "Thank you!" 
     try_again = menu.try_again()
     if try_again == "no":
         print(boarder,"\n")
