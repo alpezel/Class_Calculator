@@ -1,25 +1,39 @@
+boarder = "\n\033[0;39m==================================================="
 # make a class calcu
-class Calcu:
-    def __init__(self, n1,n2) :
-        self.n1 = n1
-        self.n2 = n2
-
-    def Add(self):
-        result = self.n1 + self.n2
+class Calculator:
+    def Add(n1, n2):
+        result = n1 + n2
         return result
-    def Subtract(self):
-        result = self.n1 - self.n2
+    
+    def Subtract(n1, n2):
+        result = n1 - n2
         return result
-    def Multiply(self):
-        result = self.n1 * self.n2
+    
+    def Multiply(n1, n2):
+        result = n1 * n2
         return result
-    def Divide(self):
+    
+    def Divide(n1, n2):
         try:
-            result = self.n1 / self.n2
+            result = n1 / n2
             return result
         except ZeroDivisionError:
             print("\n\033[0;31m[The input cannot be divided to zero !]")
 
+# make a class display
+class Display:
+    def display_menu():
+        print ("\n\033[0;39m===================================================")
+        print ("                      MENU                         ")
+        print ("===================================================")
+        print ("\n     1.Add (+)")
+        print ("     2.Subtract (-)")
+        print ("     3.Multiply (x)")
+        print ("     4.Divide (÷)")
+        print ("\n===================================================")
+
+calc = Calculator(n1,n2)
+while True:
 # Ask user to choose one of the 4 math operations(+)(-)(x)(÷)
 # use exception if the input is not number; display error message and try again
     while True:
@@ -40,22 +54,38 @@ class Calcu:
         except ValueError:
             print("\n\033[0;31m[The input is not a number or not enough values inputted!]")
         else:
-            break    
-    
+            break
+    # Use if statements to check the choices and call the corresponding function 
+    # Display result    
+    if choice == 1:
+        sum = Add()
+        print("\n\033[0;36mResult:",sum)
+        print(boarder)
+    elif choice==2:
+        diff=Subtract()
+        print ("\n\033[0;36mResult:",diff)
+        print(boarder)
+    elif choice==3:
+        prod=Multiply()
+        print ("\n\033[0;36mResult:",prod)
+        print(boarder)
+    elif choice ==4:
+        quot=Divide()
+        print ("\n\033[0;36mResult:",quot)
+        print(boarder)
 
-
-# make a class display
-class Display:
-    boarder = "\n\033[0;39m==================================================="
-    def display_menu():
-        print ("\n\033[0;39m===================================================")
-        print ("                      MENU                         ")
-        print ("===================================================")
-        print ("\n     1.Add (+)")
-        print ("     2.Subtract (-)")
-        print ("     3.Multiply (x)")
-        print ("     4.Divide (÷)")
-        print ("\n===================================================")
+    # Ask if the user wants to try again or not (yes or no) 
+    # use exception if the input is not yes or no; display error message and try again
+    # if yes repeat program; if no display "Thank you!" 
+    tryagain= input("\n\033[0;32mDo you want to try again? (yes or no): \033[0;39m")
+    while tryagain.lower() != "yes" and tryagain.lower() != "no":
+        print ("\n\033[0;31m[The input is not (yes or no)]")
+        tryagain= input("\n\033[0;32mDo you want to try again? (yes or no): \033[0;39m")
+    if tryagain.lower() == "no":
+        print(boarder,"\n")
+        print ("\033[0;34mThank you!")
+        print(boarder,"\n")
+        break
 
 
        
