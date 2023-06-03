@@ -1,12 +1,11 @@
 from calculator_with_class import Calculator 
 from calculator_with_class import Display
-from my_calcu import Extra
-
-
+from inheritance_calcu import Numbers
+boarder = "\n\033[0;39m==================================================="
 # Create instances of the classes
 calc = Calculator()
 menu = Display()
-extra = Extra()
+nums = Numbers()
 while True:
     menu.show_menu()
     choice = menu.get_choice()
@@ -16,6 +15,7 @@ while True:
     # Display result
     if choice == 1:
         result = calc.Add(n1, n2)
+        sign = nums.Sign(n1,n2)
     elif choice == 2:
         result = calc.Subtract(n1, n2)
     elif choice == 3:
@@ -24,12 +24,13 @@ while True:
         result = calc.Divide(n1, n2)
 
     print("\n\033[0;36mResult:", result)
-    print(extra.boarder)
+    print("\n\033[0;36mResult:", sign)
+    print(boarder)
 
      # if yes repeat program; if no display "Thank you!" 
     try_again = menu.try_again()
     if try_again == "no":
-        print(extra.boarder,"\n")
+        print(boarder,"\n")
         print("\033[0;34mThank you!")
-        print(extra.boarder)
+        print(boarder)
         break
