@@ -1,10 +1,12 @@
 from calculator_with_class import Calculator 
 from calculator_with_class import Display
-boarder = "\n\033[0;39m==================================================="
+from my_calcu import Extra
+
+
 # Create instances of the classes
 calc = Calculator()
 menu = Display()
-
+extra = Extra()
 while True:
     menu.show_menu()
     choice = menu.get_choice()
@@ -22,12 +24,12 @@ while True:
         result = calc.Divide(n1, n2)
 
     print("\n\033[0;36mResult:", result)
-    print(boarder)
+    print(extra.boarder)
 
      # if yes repeat program; if no display "Thank you!" 
     try_again = menu.try_again()
     if try_again == "no":
-        print(boarder,"\n")
+        print(extra.boarder,"\n")
         print("\033[0;34mThank you!")
-        print(boarder)
+        print(extra.boarder)
         break
