@@ -15,7 +15,7 @@ while True:
     # Display result
     if choice == 1:
         result = calc.Add(n1, n2)
-        sign = nums.Sign(n1,n2)
+        
     elif choice == 2:
         result = calc.Subtract(n1, n2)
     elif choice == 3:
@@ -23,8 +23,8 @@ while True:
     elif choice == 4:
         result = calc.Divide(n1, n2)
 
-    print("\n\033[0;36mResult:", result)
-    print("\n\033[0;36mResult:", sign)
+    print("\n\033[0;36mResult:", result,"\n")
+    sign = nums.Sign(n1,n2)
     print(boarder)
 
      # if yes repeat program; if no display "Thank you!" 
